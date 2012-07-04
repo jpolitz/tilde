@@ -1,0 +1,12 @@
+Do this to make the stylus work:
+
+http://sourceforge.net/apps/mediawiki/linuxwacom/index.php?title=Configuring_X
+
+This seems useful:
+
+https://bbs.archlinux.org/viewtopic.php?id=101648
+
+Use the toggle-trackpoint from https://github.com/jpolitz/tilde
+
+Also install magick-rotate: https://launchpad.net/magick-rotation
+
