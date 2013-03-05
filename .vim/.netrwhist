@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/joe/notwork'
+let g:netrw_dirhist_2='/home/joe/notwork/rinance'
+let g:netrw_dirhist_3='/home/joe/src/bootstrap'
+let g:netrw_dirhist_4='/home/joe/src/LambdaS5/tests/ses/es-lab-tests'
+let g:netrw_dirhist_5='/home/joe/src/pyret-lang'
+let g:netrw_dirhist_6='/home/joe/src/pyret-lang/htdp'
