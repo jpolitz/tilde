@@ -29,3 +29,4 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 :let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend|~|depends|zo)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
 :let g:ctrlp_dotfiles = 0
 :let g:ctrlp_switch_buffer = 0
+
