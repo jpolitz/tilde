@@ -37,7 +37,7 @@
 "	   | Highlight group                |  CTFG |  CTBG |    CTAttributes | || |   GUIFG |    GUIBG |   GUIAttributes |
 "	   |--------------------------------|-------|-------|-----------------| || |---------|----------|-----------------|
 call s:ColorDictParser({
-	\   'Normal'                      : [    231,     16,               '',      'ffffff',  '000000',               '']
+	\   'Normal'                      : [    231,     16,               '',      'eeeeee',  '111111',               '']
 	\ , 'Visual'                      : [    240,    253,               '',      '585858',  'dadada',               '']
 	\
 	\ , 'Cursor'                      : [     '',     '',               '',      'ffffff',  'dda710',               '']
@@ -52,13 +52,13 @@ call s:ColorDictParser({
 	\ , 'SignColumn'                  : [    231,    233,           'bold',      'ffffff',  '121212',           'bold']
 	\ , 'ColorColumn'                 : [      '',   233,               '',            '',  '262626',               '']
 	\
-	\ , 'StatusLine'                  : [    231,    236,           'bold',      'ffffff',  '303030',           'bold']
+	\ , 'StatusLine'                  : [    231,    236,           'bold',      'eeeeee',  '303030',           'bold']
 	\ , 'StatusLineNC'                : [    244,    232,               '',      '808080',  '080808',               '']
 	\
 	\ , 'LineNr'                      : [    243,    235,               '',      '767676',  '262626',               '']
 	\ , 'VertSplit'                   : [    240,     '',               '',      '585858',  '1c1c1c',               '']
 	\
-	\ , 'WildMenu'                    : [    234,    231,               '',      '1c1c1c',  'ffffff',               '']
+	\ , 'WildMenu'                    : [    234,    231,               '',      '1c1c1c',  'eeeeee',               '']
 	\ , 'Directory'                   : [    143,     '',           'bold',      'afaf5f',        '',           'bold']
 	\ , 'Underlined'                  : [    130,     '',               '',      'af5f00',        '',               '']
 	\
@@ -72,17 +72,17 @@ call s:ColorDictParser({
 	\ , 'vimCommentTitle'             : [    250,    233,               '',      'bcbcbc',  '121212',               '']
 	\ , 'vimCommentString'            : [    245,    233,               '',      '8a8a8a',  '121212',               '']
 	\
-	\ , 'TabLine'                     : [    231,    238,               '',      'ffffff',  '444444',               '']
-	\ , 'TabLineSel'                  : [    255,     '',           'bold',      'eeeeee',        '',           'bold']
+	\ , 'TabLine'                     : [    231,    238,               '',      'eeeeee',  '444444',               '']
+	\ , 'TabLineSel'                  : [    255,     '',           'bold',      'dddddd',        '',           'bold']
 	\ , 'TabLineFill'                 : [    240,    238,               '',      '585858',  '444444',               '']
 	\ , 'TabLineNumber'               : [    160,    238,           'bold',      'd70000',  '444444',           'bold']
 	\ , 'TabLineClose'                : [    245,    238,           'bold',      '8a8a8a',  '444444',           'bold']
 	\
-	\ , 'SpellCap'                    : [    231,     31,           'bold',      'ffffff',  '0087af',           'bold']
+	\ , 'SpellCap'                    : [    231,     31,           'bold',      'eeeeee',  '0087af',           'bold']
 	\
 	\ , 'SpecialKey'                  : [    239,     '',               '',      '4e4e4e',        '',               '']
 	\ , 'NonText'                     : [     88,     '',               '',      '870000',        '',               '']
-	\ , 'MatchParen'                  : [    231,     25,           'bold',      'ffffff',  '005faf',           'bold']
+	\ , 'MatchParen'                  : [    231,     25,           'bold',      'eeeeee',  '005faf',           'bold']
 	\
 	\ , 'Constant'                    : [    137,     '',           'bold',      'af875f',        '',           'bold']
 	\ , 'Special'                     : [    150,     '',               '',      'afd787',        '',               '']
