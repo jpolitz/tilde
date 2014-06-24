@@ -57,8 +57,10 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 function git_prompt() {
-  if [[ -d ./.git ]]; then
-    TEXT=$(git status -b --porcelain)
+  TEXT=$(git status -b --porcelain 2>&1)
+  INGIT=$?
+
+  if [[ $INGIT == 0 ]]; then
     NEW=$(echo -e "$TEXT" | grep "^??" -c)
     MOD=$(echo -e "$TEXT" | grep "^\(A\|M\|D\| \)M" -c)
     STAGE=$(echo -e "$TEXT" | grep "^M\|^A\|^D" -c)
