@@ -59,8 +59,21 @@ fi
 function git_prompt() {
   TEXT=$(git status -b --porcelain 2>&1)
   INGIT=$?
+  wd=`pwd`
+  home_escape=$(echo $HOME | sed "s/\//\\\\\//g")
 
   if [[ $INGIT == 0 ]]; then
+    curbasedir="."
+    basedir=`pwd`
+    restdir=""
+    until [[ -d .git ]]; do
+      curbasedir="$basedir/.."
+      dir=$(pwd)
+      curdir=`basename $dir`
+      restdir="$curdir/$restdir"
+      cd $curbasedir
+      basedir=$(pwd)
+    done
     NEW=$(echo -e "$TEXT" | grep "^??" -c)
     MOD=$(echo -e "$TEXT" | grep "^\(A\|M\|D\| \)M" -c)
     STAGE=$(echo -e "$TEXT" | grep "^M\|^A\|^D" -c)
@@ -85,14 +98,20 @@ function git_prompt() {
       BEHIND="↓"
       SPACE=" "
     fi
-    echo " [$BRANCH$SPACE$STAGED$STAR$PLUS$AHEAD$BEHIND]"
+    str="$basedir [$BRANCH:$restdir$SPACE$STAGED$STAR$PLUS$AHEAD$BEHIND]"
+    replaced=$(echo $str | sed "s/^$home_escape/~/g")
+    echo $replaced
+  else
+    str="$wd"
+    replaced=$(echo $str | sed "s/^$home_escape/~/g")
+    echo $replaced
   fi
 }
 
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\h:\w$(git_prompt)\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\h:$(git_prompt)\$ '
 fi
 unset color_prompt force_color_prompt
 
