@@ -1,0 +1,7 @@
+[user]
+	email = joe.politz@gmail.com
+	name = Joe Gibbs Politz
+[color "diff"]
+  old = blue
+  new = yellow
+  whitespace = white

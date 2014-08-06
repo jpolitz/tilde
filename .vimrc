@@ -2,12 +2,13 @@ set expandtab		" use spaces not tab characters
 set wildmenu
 set ts=2
 set sw=2
-set textwidth=0
+set textwidth=78
 set guioptions=
 set gfn=Inconsolata\ 12
 set autoindent
 
 au BufNewFile,BufRead *.rkt set filetype=scheme
+au BufNewFile,BufRead *.scrbl set filetype=scrbl
 au BufNewFile,BufRead *.als set filetype=alloy4
 au BufRead,BufNewFile *.go set filetype=go
 au BufRead,BufNewFile *.arr set filetype=pyret

@@ -80,25 +80,30 @@ function git_prompt() {
     BRANCH=$(echo "$TEXT" | head -n 1 | cut -d" " -f2 | cut -d"." -f1)
     if [[ $NEW != "0"  ]]; then
       PLUS="+" 
-      SPACE=" "
+      OPAREN="("
+      CPAREN=")"
     fi
     if [[ $MOD != "0" ]]; then
       STAR="*"
-      SPACE=" "
+      OPAREN="("
+      CPAREN=")"
     fi
     if [[ $STAGE != "0" ]]; then
       STAGED="!"
-      SPACE=" "
+      OPAREN="("
+      CPAREN=")"
     fi
     if [[ $TEXT =~ "[ahead" ]]; then
       AHEAD="↑"
-      SPACE=" "
+      OPAREN="("
+      CPAREN=")"
     fi
     if [[ $TEXT =~ "[behind" ]]; then
       BEHIND="↓"
-      SPACE=" "
+      OPAREN="("
+      CPAREN=")"
     fi
-    str="$basedir [$BRANCH:$restdir$SPACE$STAGED$STAR$PLUS$AHEAD$BEHIND]"
+    str="$basedir [$BRANCH$OPAREN$STAGED$STAR$PLUS$AHEAD$BEHIND$CPAREN:$restdir]"
     replaced=$(echo $str | sed "s/^$home_escape/~/g")
     echo $replaced
   else
