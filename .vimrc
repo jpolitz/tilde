@@ -2,10 +2,11 @@ set expandtab		" use spaces not tab characters
 set wildmenu
 set ts=2
 set sw=2
-set textwidth=78
+set tw=0
 set guioptions=
-set gfn=Inconsolata\ 12
+set gfn=Triplicate\ \T4c:h10
 set autoindent
+set ruler
 
 au BufNewFile,BufRead *.rkt set filetype=scheme
 au BufNewFile,BufRead *.scrbl set filetype=scrbl
@@ -21,12 +22,12 @@ map <C-l> <C-w>w
 
 
 if has('gui_running')
-  set background=dark
-  colorscheme distinguished
+  colorscheme pyte
 endif
 
 digraph bt 8869 pv 8870 sk 9760
 set ambiwidth=double
+
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 :let g:ctrlp_match_window_bottom = 0
