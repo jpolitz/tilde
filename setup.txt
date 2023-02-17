@@ -10,4 +10,3 @@ Use the toggle-trackpoint from https://github.com/jpolitz/tilde
 
 Also install magick-rotate: https://launchpad.net/magick-rotation
 
-Editing
